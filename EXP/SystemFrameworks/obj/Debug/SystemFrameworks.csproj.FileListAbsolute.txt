@@ -1,0 +1,6 @@
+C:\05\基本框架\EXP\SystemFrameworks\bin\Light.EXP.SystemFrameworks.dll
+C:\05\基本框架\EXP\SystemFrameworks\bin\Light.EXP.SystemFrameworks.pdb
+C:\05\基本框架\EXP\SystemFrameworks\obj\Debug\SystemFrameworks.csprojAssemblyReference.cache
+C:\05\基本框架\EXP\SystemFrameworks\obj\Debug\SystemFrameworks.csproj.CoreCompileInputs.cache
+C:\05\基本框架\EXP\SystemFrameworks\obj\Debug\Light.EXP.SystemFrameworks.dll
+C:\05\基本框架\EXP\SystemFrameworks\obj\Debug\Light.EXP.SystemFrameworks.pdb

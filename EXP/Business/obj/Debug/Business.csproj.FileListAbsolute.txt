@@ -1,0 +1,13 @@
+C:\05\基本框架\EXP\Business\bin\Light.EXP.Business.dll
+C:\05\基本框架\EXP\Business\bin\Light.EXP.Business.pdb
+C:\05\基本框架\EXP\Business\bin\Light.EXP.DataAccess.dll
+C:\05\基本框架\EXP\Business\bin\Light.EXP.Model.dll
+C:\05\基本框架\EXP\Business\bin\Light.EXP.SystemFrameworks.dll
+C:\05\基本框架\EXP\Business\bin\Light.EXP.DataAccess.pdb
+C:\05\基本框架\EXP\Business\bin\Light.EXP.Model.pdb
+C:\05\基本框架\EXP\Business\bin\Light.EXP.SystemFrameworks.pdb
+C:\05\基本框架\EXP\Business\obj\Debug\Business.csprojAssemblyReference.cache
+C:\05\基本框架\EXP\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\05\基本框架\EXP\Business\obj\Debug\Business.csproj.CopyComplete
+C:\05\基本框架\EXP\Business\obj\Debug\Light.EXP.Business.dll
+C:\05\基本框架\EXP\Business\obj\Debug\Light.EXP.Business.pdb

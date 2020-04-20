@@ -1,5 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{2FF3FCBA-908C-49E9-A8D1-2DC6D39E3551}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{1DED1C41-FE20-45E1-BF66-746F0663A105}"
@@ -17,8 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 		{2FF3FCBA-908C-49E9-A8D1-2DC6D39E3551} = {2FF3FCBA-908C-49E9-A8D1-2DC6D39E3551}
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\...\WebUI\", "WebUI", "{013C607E-E0ED-4D51-839B-33272F8737FF}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebUI", "WebUI\", "{013C607E-E0ED-4D51-839B-33272F8737FF}"
 	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
 		ProjectReferences = "{1DED1C41-FE20-45E1-BF66-746F0663A105}|Light.EXP.Business.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/WebUI"
 		Debug.AspNetCompiler.PhysicalPath = "WebUI\"
@@ -35,6 +38,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\...\WebUI\", "WebUI", "{
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "3882"
+		SlnRelativePath = "WebUI\"
 	EndProjectSection
 EndProject
 Global
@@ -87,18 +91,23 @@ Global
 		{024324FE-820B-4060-933E-C6AA80EB4292}.Release|Any CPU.Build.0 = Release|Any CPU
 		{024324FE-820B-4060-933E-C6AA80EB4292}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{024324FE-820B-4060-933E-C6AA80EB4292}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|.NET.ActiveCfg = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|.NET.Build.0 = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Any CPU.ActiveCfg = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Mixed Platforms.ActiveCfg = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Mixed Platforms.Build.0 = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|.NET.ActiveCfg = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|.NET.Build.0 = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Any CPU.ActiveCfg = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Mixed Platforms.ActiveCfg = Debug|.NET
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Mixed Platforms.Build.0 = Debug|.NET
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|.NET.Build.0 = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|.NET.Build.0 = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{013C607E-E0ED-4D51-839B-33272F8737FF}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5C87280-E973-4BA0-AA2C-18D2EE6199EE}
 	EndGlobalSection
 EndGlobal

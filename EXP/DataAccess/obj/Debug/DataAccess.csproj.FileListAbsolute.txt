@@ -1,0 +1,11 @@
+C:\05\基本框架\EXP\DataAccess\bin\Light.EXP.DataAccess.dll
+C:\05\基本框架\EXP\DataAccess\bin\Light.EXP.DataAccess.pdb
+C:\05\基本框架\EXP\DataAccess\bin\Light.EXP.Model.dll
+C:\05\基本框架\EXP\DataAccess\bin\Light.EXP.SystemFrameworks.dll
+C:\05\基本框架\EXP\DataAccess\bin\Light.EXP.Model.pdb
+C:\05\基本框架\EXP\DataAccess\bin\Light.EXP.SystemFrameworks.pdb
+C:\05\基本框架\EXP\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\05\基本框架\EXP\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\05\基本框架\EXP\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\05\基本框架\EXP\DataAccess\obj\Debug\Light.EXP.DataAccess.dll
+C:\05\基本框架\EXP\DataAccess\obj\Debug\Light.EXP.DataAccess.pdb
