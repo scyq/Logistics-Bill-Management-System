@@ -53,8 +53,15 @@ namespace Light.EXP.Business.Bill
         public int CreateBillDispense(BillDispense billDispense)
         {
             BillInterface ibill = BillFactory.Create();
-            // 这里不太会写，是不是要再重载一边ExistBillDispense，否则为什么可以只传一个参数？
-            return ibill.CreateBillDispense(billDispense);
+            if (!ibill.ExistBillDispense(billDispense.BillStartCode, billDispense.BillType, billDispense.ReceiveBillTime))
+                return -1;
+            else if (!ibill.ExistBillDispense(billDispense.BillEndCode, billDispense.BillType, billDispense.ReceiveBillTime))
+                return -2;
+            else
+                if (ibill.CreateBillDispense(billDispense) > 0)
+                return ibill.CreateBillDispense(billDispense);
+            else
+                return billDispense.PkId;
             
         }
 
