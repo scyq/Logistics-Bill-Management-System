@@ -25,7 +25,7 @@ namespace Light.EXP.DataAccess.Bill
         /// <param name="recordCount">总记录数</param>
         /// <returns>DataSet</returns>
 
-        DataSet GetBillDispenses(string receiveBillPerson, string billType, string sortField, string sortOrder, int pageIndex, int pageSize, ref Int64 recordCount);
+        DataSet GetBillDispenses(string receiveBillPerson, string billType, int pageIndex, int pageSize, ref Int64 recordCount);
 
         /// <summary>
         /// 获取单个票据分发实体
@@ -41,7 +41,7 @@ namespace Light.EXP.DataAccess.Bill
         /// <param name="billDispense">票据分发实体</param>
         /// <returns>int</returns>
 
-        int CreateBillDispense(BillDispense billDispense);
+        int CreateDispense(BillDispense billDispense);
 
         /// <summary>
         /// 修改票据分发信息

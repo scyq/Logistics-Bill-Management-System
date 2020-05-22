@@ -26,10 +26,10 @@ namespace Light.EXP.Business.Bill
         /// <param name="recordCount">总记录数</param>
         /// <returns>DataSet</returns>
 
-        public DataSet GetBillDispenses(string receiveBillPerson, string billType, string sortField, string sortOrder, int pageIndex, int pageSize, ref Int64 recordCount)
+        public DataSet GetBillDispenses(string receiveBillPerson, string billType, int pageIndex, int pageSize, ref Int64 recordCount)
         {
             BillInterface ibill = BillFactory.Create();
-            return ibill.GetBillDispenses(receiveBillPerson, billType, sortField, sortOrder, pageIndex, pageSize, ref recordCount);
+            return ibill.GetBillDispenses(receiveBillPerson, billType, pageIndex, pageSize, ref recordCount);
         }
 
         /// <summary>
@@ -55,11 +55,8 @@ namespace Light.EXP.Business.Bill
             BillInterface ibill = BillFactory.Create();
             if (!ibill.ExistBillDispense(billDispense.BillStartCode, billDispense.BillType, billDispense.ReceiveBillTime))
                 return -1;
-            else if (!ibill.ExistBillDispense(billDispense.BillEndCode, billDispense.BillType, billDispense.ReceiveBillTime))
+            if (!ibill.ExistBillDispense(billDispense.BillEndCode, billDispense.BillType, billDispense.ReceiveBillTime))
                 return -2;
-            else
-                if (ibill.CreateBillDispense(billDispense) > 0)
-                return ibill.CreateBillDispense(billDispense);
             else
                 return billDispense.PkId;
             

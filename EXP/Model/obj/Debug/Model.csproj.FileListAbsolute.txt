@@ -3,4 +3,3 @@ C:\05\基本框架\EXP\Model\bin\Light.EXP.Model.pdb
 C:\05\基本框架\EXP\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\05\基本框架\EXP\Model\obj\Debug\Light.EXP.Model.dll
 C:\05\基本框架\EXP\Model\obj\Debug\Light.EXP.Model.pdb
-C:\05\基本框架\EXP\Model\obj\Debug\Model.csprojAssemblyReference.cache

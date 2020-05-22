@@ -28,8 +28,12 @@ namespace Light.EXP.WebUI.SystemFrame
                 this.trvLeft.DataBind();
                 string url = Request.FilePath;
                 int indexBegin = url.IndexOf("/", 2);
-                int indexEnd = url.LastIndexOf("/");                
-                url = url.Substring(indexBegin, indexEnd - indexBegin);
+                int indexEnd = url.LastIndexOf("/");  
+                if (indexBegin > -1)
+                {
+                    url = url.Substring(indexBegin, indexEnd - indexBegin);
+                }
+                
                 
                 TreeNode rootNode = this.trvLeft.Nodes[0];
                 this.ExpCollByUrl(rootNode, url);

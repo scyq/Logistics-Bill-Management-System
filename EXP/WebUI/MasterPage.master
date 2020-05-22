@@ -1,8 +1,8 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Light.EXP.WebUI.SystemFrame.MasterPage" %>
+ï»¿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Light.EXP.WebUI.SystemFrame.MasterPage" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>¿ìµÝÔËÊä¹ÜÀíÏµÍ³</title>
+    <title>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³</title>
     <link href="App_Themes/Default/default.css" type="text/css" rel="Stylesheet" />
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td align="center" bgcolor="#94BEDE" height="20">
-                    <asp:LoginName ID="lgnnUser" runat="server" FormatString="»¶Ó­ {0} µÇÂ½´ËÏµÍ³"/>
+                    <asp:LoginName ID="lgnnUser" runat="server" FormatString="ï¿½ï¿½Ó­ {0} ï¿½ï¿½Â½ï¿½ï¿½ÏµÍ³"/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:LoginStatus ID="lgnsUser" runat="server" LogoutPageUrl="~/Secure/login.aspx" LogoutAction="RedirectToLoginPage" />
                 </td>

@@ -12,8 +12,9 @@ namespace Light.EXP.DataAccess.Bill
     using System.Data.SqlClient;
     using Light.EXP.Model.Bill;
     using Light.EXP.DataAccess.SystemFrame;
+    using Light.EXP.SystemFrameworks;
 
-    class BillSQLHandle
+    class BillSQLHandle : BillInterface
     {
         /// <summary>
         /// 获取多个票据分发实体
@@ -26,15 +27,13 @@ namespace Light.EXP.DataAccess.Bill
 		/// <param name="pageSize">每页显示的记录数</param>
         /// <param name="recordCount">总记录数</param>
 		/// <returns>DataSet</returns>
-        public DataSet GetBillDispenses(string receiveBillPerson, string billType, string sortField, string sortOrder, int pageIndex, int pageSize, ref Int64 recordCount)
+        public DataSet GetBillDispenses(string receiveBillPerson, string billType, int pageIndex, int pageSize, ref Int64 recordCount)
         {
             SQLHelper helper = new SQLHelper();
             SqlParameter[] prams =
             {
                 new SqlParameter("@receiveBillPerson",SqlDbType.VarChar,50),
                 new SqlParameter("@billType",SqlDbType.VarChar,50),
-                new SqlParameter("@sortField", SqlDbType.NVarChar, 255),
-                new SqlParameter("@sortOrder", SqlDbType.NVarChar, 4),
                 new SqlParameter("@pageIndex",SqlDbType.Int,4),
                 new SqlParameter("@pageSize",SqlDbType.Int,4),
                 new SqlParameter("@recordCount", SqlDbType.Int, 4)
@@ -42,13 +41,11 @@ namespace Light.EXP.DataAccess.Bill
 
             prams[0].Value = receiveBillPerson;
             prams[1].Value = billType;
-            prams[2].Value = sortField;
-            prams[3].Value = sortOrder;
-            prams[4].Value = pageIndex;
-            prams[5].Value = pageSize;
-            prams[6].Direction = ParameterDirection.Output;
+            prams[2].Value = pageIndex;
+            prams[3].Value = pageSize;
+            prams[4].Direction = ParameterDirection.Output;
             DataSet ds = helper.ExecuteDataSet("uspGetBillDispenses", prams);
-            recordCount = int.Parse(prams[6].Value.ToString());
+            recordCount = int.Parse(prams[4].Value.ToString());
             return ds;
 
         }
@@ -62,19 +59,17 @@ namespace Light.EXP.DataAccess.Bill
         public BillDispense GetBillDispense(int pkId)
         {
             SQLHelper helper = new SQLHelper();
-            SqlDataReader dr = null;
             SqlParameter[] prams =
             {
-                new SqlParameter("@pkId", SqlDbType.Int, 4)
+                new SqlParameter("@PKID", SqlDbType.Int, 4)
             };
             prams[0].Value = pkId;
-            dr = helper.ExecuteDataReader("uspGetBillDispense", prams);
+            SqlDataReader dr = helper.ExecuteDataReader("uspGetBillDispense", prams);
 
             BillDispense billDispense = new BillDispense();
 
             if (dr.Read())
             {
-                billDispense.PkId = int.Parse(dr["PkId"].ToString());
                 billDispense.BillType = dr["BillType"].ToString();
                 billDispense.BillStartCode = dr["BillStartCode"].ToString();
                 billDispense.BillEndCode = dr["BillEndCode"].ToString();
@@ -95,7 +90,7 @@ namespace Light.EXP.DataAccess.Bill
 		/// </summary>
 		/// <param name="billDispense">票据分发实体</param>
 		/// <returns>int</returns>
-        public int CreateBillDispense(BillDispense billDispense)
+        public int CreateDispense(BillDispense billDispense)
         {
             SQLHelper helper = new SQLHelper();
             SqlParameter[] prams =
@@ -106,7 +101,8 @@ namespace Light.EXP.DataAccess.Bill
                 new SqlParameter("@receiveBillPerson",SqlDbType.VarChar,50),
                 new SqlParameter("@acceptStation",SqlDbType.VarChar,50),
                 new SqlParameter("@receiveBillTime",SqlDbType.DateTime,40),
-                new SqlParameter("@releasePerson",SqlDbType.VarChar,50)
+                new SqlParameter("@releasePerson",SqlDbType.VarChar,50),
+                new SqlParameter("@PKID", SqlDbType.Int, 4)
             };
             prams[0].Value = billDispense.BillType;
             prams[1].Value = billDispense.BillStartCode;
@@ -115,8 +111,10 @@ namespace Light.EXP.DataAccess.Bill
             prams[4].Value = billDispense.AcceptStation;
             prams[5].Value = billDispense.ReceiveBillTime;
             prams[6].Value = billDispense.ReleasePerson;
+            prams[7].Direction = ParameterDirection.Output;
 
-            return helper.ExecuteNonQuery("uspCreateBillDispense", prams);
+            helper.ExecuteNonQuery("uspCreateDispense", prams);
+            return Convert.ToInt32(prams[7].Value.ToString());
         }
 
         /// <summary>
@@ -154,7 +152,7 @@ namespace Light.EXP.DataAccess.Bill
             SQLHelper helper = new SQLHelper();
             SqlParameter[] prams =
             {
-                new SqlParameter("@pkId",SqlDbType.Int,4)
+                new SqlParameter("@PKID",SqlDbType.Int,4)
             };
             prams[0].Value = pkId;
             return helper.ExecuteNonQuery("uspDeleteBillDispense", prams) == 0 ? true : false;
@@ -215,8 +213,8 @@ namespace Light.EXP.DataAccess.Bill
             prams[0].Value = billCode;
             prams[1].Value = billType;
             prams[2].Value = billStatus;
-            prams[3].Value = beginWriteDate;
-            prams[4].Value = endWriteDate;
+            prams[3].Value = Utility.ParseDateTime(beginWriteDate);
+            prams[4].Value = Utility.ParseDateTime(endWriteDate);
             prams[5].Value = pageIndex;
             prams[6].Value = pageSize;
             prams[7].Direction = ParameterDirection.Output;

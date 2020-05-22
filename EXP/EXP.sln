@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebUI", "WebUI\", "{013C607E-E0ED-4D51-839B-33272F8737FF}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{1DED1C41-FE20-45E1-BF66-746F0663A105}|Light.EXP.Business.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/WebUI"
 		Debug.AspNetCompiler.PhysicalPath = "WebUI\"
@@ -72,6 +72,7 @@ Global
 		{1DED1C41-FE20-45E1-BF66-746F0663A105}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{1DED1C41-FE20-45E1-BF66-746F0663A105}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BF5B4FB1-F81E-4937-A109-B2F1FF46B768}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{BF5B4FB1-F81E-4937-A109-B2F1FF46B768}.Debug|.NET.Build.0 = Debug|Any CPU
 		{BF5B4FB1-F81E-4937-A109-B2F1FF46B768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF5B4FB1-F81E-4937-A109-B2F1FF46B768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF5B4FB1-F81E-4937-A109-B2F1FF46B768}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -92,7 +93,6 @@ Global
 		{024324FE-820B-4060-933E-C6AA80EB4292}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{024324FE-820B-4060-933E-C6AA80EB4292}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|.NET.Build.0 = Debug|Any CPU
 		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{013C607E-E0ED-4D51-839B-33272F8737FF}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
